@@ -3,3 +3,10 @@ class BinarySearchTreeNode:
         self.data = data
         self.left = None
         self.right = None
+    
+    def add_child (self, data):
+        #If the value already exist
+        if data == self.data:
+            return 
+        #If data is less than the value of current node --Add to left subtree
+        #If data is greater than the value of current node --Add to right subtree
