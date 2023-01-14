@@ -8,5 +8,13 @@ class BinarySearchTreeNode:
         #If the value already exist
         if data == self.data:
             return 
+
         #If data is less than the value of current node --Add to left subtree
+        if data < self.data:
+            if self.left:
+                self.left.add_child(data) 
+            else:
+                self.left = BinarySearchTreeNode(data)
+
         #If data is greater than the value of current node --Add to right subtree
+        
