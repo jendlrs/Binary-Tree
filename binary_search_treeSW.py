@@ -147,7 +147,14 @@ if __name__ == '__main__':
 
         #Testing delete function
 
-    letters_name_tree = ["M", "A", "J", "E", "N", "S", "E", "N", "N", "I","C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"]
-    letters_name_tree = build_tree(letters_name)
+    letters_name_tree = build_tree(["M", "A", "J", "E", "N", "S", "E", "N", "N", "I","C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"])
     letters_name_tree.delete("E")
     print("\nAfter deleting E:", letters_name_tree.in_order_traversal())
+
+    letters_name_tree = build_tree(["M", "A", "J", "E", "N", "S", "E", "N", "N", "I","C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"])
+    letters_name_tree.delete("M")
+    print("\nAfter deleting M:", letters_name_tree.in_order_traversal())
+
+    letters_name_tree = build_tree(["M", "A", "J", "E", "N", "S", "E", "N", "N", "I","C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"])
+    letters_name_tree.delete("N")
+    print("\nAfter deleting N:", letters_name_tree.in_order_traversal())
