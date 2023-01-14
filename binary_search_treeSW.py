@@ -25,6 +25,24 @@ class BinarySearchTreeNode:
             else:
                 self.right = BinarySearchTreeNode(data)
 
+    def search (self, val):
+        if self.data == val:
+            return True
+
+        if val < self.data:
+            #value might be in left subtree
+            if self.left:
+                return self.left.search(val)
+            else:
+                return False #It means the value does not exist in the elements
+
+        if val > self.data:
+            #value might be in right subtree
+            if self.right:
+                return self.right.search(val)
+            else:
+                return False #It means the value does not exist in the elements
+
     def in_order_traversal(self):
         elements = []
 
@@ -86,3 +104,5 @@ if __name__ == '__main__':
     print("\nIn order traversal:",letters_name_tree.in_order_traversal())
     print("\nPost order traversal:",letters_name_tree.post_order_traversal())
     print("\nPre order traversal:",letters_name_tree.pre_order_traversal())
+    print("\nIs there letter M?",letters_name_tree.search("M")) 
+    print("\nIs there letter W?",letters_name_tree.search("W")) 
