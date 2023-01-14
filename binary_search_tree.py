@@ -69,4 +69,4 @@ def build_tree(elements):
 if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34, 18, 4]
     numbers_tree = build_tree(numbers)
-    print(numbers_tree.in_order_traversal())
+    print(numbers_tree.search(400))
