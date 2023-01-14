@@ -82,4 +82,7 @@ if __name__ == '__main__':
     letters_name = ["M", "A", "J", "E", "N", "S", "E", "N", "N", "I","C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"]
     letters_name_tree = build_tree(letters_name)
 
-    print(letters_name_tree.in_order_traversal())
+    print("\nInput Letters:", letters_name)
+    print("\nIn order traversal:",letters_name_tree.in_order_traversal())
+    print("\nPost order traversal:",letters_name_tree.post_order_traversal())
+    print("\nPre order traversal:",letters_name_tree.pre_order_traversal())
