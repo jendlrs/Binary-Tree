@@ -40,3 +40,15 @@ class BinarySearchTreeNode:
                 return self.right.search(val)
             else:
                 return False #It means the value does not exist in the elements
+
+    def in_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.in_order_traversal()
+
+        elements.append(self.data)
+
+        if self.right:
+            elements += self.right.in_order_traversal()
+
+        return elements
