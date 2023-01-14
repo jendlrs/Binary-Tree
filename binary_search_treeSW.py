@@ -40,3 +40,19 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
 
         return elements
+    
+    def post_order_traversal(self):
+        elements = []
+
+        #Visit the left tree
+        if self.left:
+            elements += self.left.post_order_traversal()
+        
+        #Visit the right tree
+        if self.right:
+            elements += self.right.post_order_traversal()
+        
+        #Visit the base node
+        elements.append(self.data)
+
+        return elements
