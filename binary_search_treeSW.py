@@ -69,3 +69,7 @@ class BinarySearchTreeNode:
             elements += self.right.pre_order_traversal()
 
         return elements
+
+if __name__ == '__main__':
+    letters_name = (["M", "A", "J", "E", "N", "S", "E", "N", "N", "I" "C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"])
+    
