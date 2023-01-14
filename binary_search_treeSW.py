@@ -87,7 +87,7 @@ class BinarySearchTreeNode:
             elements += self.right.pre_order_traversal()
 
         return elements
-        
+
     def find_max(self):
         if self.right is None:
             return self.data
@@ -116,3 +116,5 @@ if __name__ == '__main__':
     print("\nPre order traversal:",letters_name_tree.pre_order_traversal())
     print("\nIs there letter M?",letters_name_tree.search("M")) 
     print("\nIs there letter W?",letters_name_tree.search("W")) 
+    print("\nMinimum:",letters_name_tree.find_min())
+    print("\nMaximum:",letters_name_tree.find_max())
