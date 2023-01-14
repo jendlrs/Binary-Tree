@@ -22,3 +22,21 @@ class BinarySearchTreeNode:
                 self.right.add_child(data) 
             else:
                 self.right = BinarySearchTreeNode(data)
+
+    def search (self, val):
+        if self.data == val:
+            return True
+
+        if val < self.data:
+            #value might be in left subtree
+            if self.left:
+                return self.left.search(val)
+            else:
+                return False #It means the value does not exist in the elements
+
+        if val > self.data:
+            #value might be in right subtree
+            if self.right:
+                return self.right.search(val)
+            else:
+                return False #It means the value does not exist in the elements
