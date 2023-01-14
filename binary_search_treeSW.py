@@ -145,9 +145,9 @@ if __name__ == '__main__':
     print("\nMinimum:",letters_name_tree.find_min())
     print("\nMaximum:",letters_name_tree.find_max())
 
-    #Testing delete function
+        #Testing delete function
 
     letters_name_tree = ["M", "A", "J", "E", "N", "S", "E", "N", "N", "I","C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"]
     letters_name_tree = build_tree(letters_name)
-    letters_name_tree.delete("A")
-    print("After deleting A:", letters_name_tree.in_order_traversal())
+    letters_name_tree.delete("E")
+    print("\nAfter deleting E:", letters_name_tree.in_order_traversal())
