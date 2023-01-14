@@ -73,7 +73,7 @@ class BinarySearchTreeNode:
             elements += self.right.pre_order_traversal()
 
         return elements
-        
+
     def search (self, val):
         if self.data == val:
             return True
@@ -120,6 +120,7 @@ if __name__ == '__main__':
 
     numbers_tree = build_tree(numbers)
 
+    print("Input numbers:",numbers)
     print("Min:",numbers_tree.find_min())
     print("Max:",numbers_tree.find_max())
     print("Sum:",numbers_tree.calculate_sum())
