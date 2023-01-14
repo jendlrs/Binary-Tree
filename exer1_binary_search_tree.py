@@ -94,3 +94,4 @@ if __name__ == '__main__':
     print("Min:",numbers_tree.find_min())
     print("Max:",numbers_tree.find_max())
     print("Sum:",numbers_tree.calculate_sum())
+    print("In order traversal:", numbers_tree.in_order_traversal())
