@@ -103,4 +103,4 @@ if __name__ == '__main__':
     numbers_tree.delete(9)
 
     print("Building tree with these elements:", numbers)
-    print("After deleting 20", numbers_tree.in_order_traversal())
+    print("After deleting 9", numbers_tree.in_order_traversal())
