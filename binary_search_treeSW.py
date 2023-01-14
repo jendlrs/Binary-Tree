@@ -70,6 +70,16 @@ class BinarySearchTreeNode:
 
         return elements
 
+def build_tree(elements):
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range(1, len(elements)):
+        root.add_child(elements[i])
+
+    return root
+
 if __name__ == '__main__':
-    letters_name = (["M", "A", "J", "E", "N", "S", "E", "N", "N", "I" "C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"])
-    
+    letters_name = ["M", "A", "J", "E", "N", "S", "E", "N", "N", "I","C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"]
+    letters_name_tree = build_tree(letters_name)
+
+    print(letters_name_tree.in_order_traversal())
