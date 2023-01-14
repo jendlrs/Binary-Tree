@@ -103,6 +103,27 @@ class BinarySearchTreeNode:
         right_sum = self.right.calculate_sum() if self.right else 0
         return self.data + left_sum + right_sum
 
+    def delete (self, val):
+        if val < self.data:
+            if self.left:
+                self.left = self.left.delete(val)
+        elif val > self.data:
+            if self.right:
+                self.right = self.right.delete(val)
+        else:
+            if self.left is None and self.right is None:
+                return None
+            if self.left is None:
+                return self.right
+            if self.right is None:
+                return self.left
+
+            max_val = self.left.find_max()
+            self.data = max_val
+            self.left = self.left.delete(max_val)
+
+        return self
+
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
 
@@ -123,3 +144,10 @@ if __name__ == '__main__':
     print("\nIs there letter W?",letters_name_tree.search("W")) 
     print("\nMinimum:",letters_name_tree.find_min())
     print("\nMaximum:",letters_name_tree.find_max())
+
+    #Testing delete function
+
+    letters_name_tree = ["M", "A", "J", "E", "N", "S", "E", "N", "N", "I","C", "O","L", "E", "C", "D", "E", "L", "A", "R", "O", "S", "A"]
+    letters_name_tree = build_tree(letters_name)
+    letters_name_tree.delete("A")
+    print("After deleting A:", letters_name_tree.in_order_traversal())
